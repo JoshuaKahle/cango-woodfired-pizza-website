@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+.windsurf/
+.agent/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+
+# Composer
+/vendor/
+
+# Docker
+**/.docker/
+
+# OS-specific
+Desktop.ini

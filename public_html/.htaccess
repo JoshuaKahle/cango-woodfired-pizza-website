@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^(config|includes|vendor)/ - [F,L]
+RewriteRule \.(sql|log|ini|yml|yaml|env|bak|swp)$ - [F,L,NC]
+RewriteRule ^(composer\.(json|lock)|docker-compose\.yml|Dockerfile)$ - [F,L,NC]
+</IfModule>

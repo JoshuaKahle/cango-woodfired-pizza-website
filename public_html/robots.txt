@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /dashboard.php
+Disallow: /login.php
+Disallow: /logout.php
+Disallow: /inspect_db.php
+Disallow: /ensure_standard_size.php
+Disallow: /generate_pdf.php
+Disallow: /vendor/
+
+Sitemap: https://cangopizza.co.za/sitemap.xml

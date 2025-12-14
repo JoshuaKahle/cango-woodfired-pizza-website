@@ -1,0 +1,14 @@
+{
+    "name": "cango/woodfired-pizza",
+    "description": "Pizza Restaurant Website with Custom CMS",
+    "type": "project",
+    "require": {
+        "php": "^7.4",
+        "dompdf/dompdf": "^2.0"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
+    }
+}

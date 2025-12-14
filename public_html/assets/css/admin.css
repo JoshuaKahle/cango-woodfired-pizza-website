@@ -1,0 +1,332 @@
+.admin-app {
+    --admin-bg: #2a231a;
+    --admin-surface: #f3eadb;
+    --admin-surface-2: #efe2cd;
+    --admin-red: #a93226;
+    --admin-red-2: #7f241c;
+    --admin-text: #20170f;
+    --admin-muted: rgba(32, 23, 15, 0.62);
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-size: 0.92rem;
+}
+
+.admin-app h1,
+.admin-app h2,
+.admin-app h3,
+.admin-app h4,
+.admin-app h5 {
+    font-family: inherit;
+    text-transform: none;
+    letter-spacing: 0.2px;
+}
+
+.admin-navbar {
+    background: #1c1711 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-navbar .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.admin-subtitle {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: -2px;
+}
+
+.admin-tabs {
+    border-bottom: 0 !important;
+    gap: 12px;
+    justify-content: center;
+}
+
+.admin-tabs .nav-link {
+    border: 0 !important;
+    background: rgba(243, 234, 219, 0.08);
+    color: rgba(243, 234, 219, 0.92);
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 1.05rem;
+}
+
+.admin-tabs .nav-link:hover {
+    background: rgba(243, 234, 219, 0.14);
+}
+
+.admin-tabs .nav-link.active {
+    background: rgba(243, 234, 219, 0.2);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+}
+
+.admin-app .container {
+    color: var(--admin-text);
+}
+
+.admin-app .tab-content {
+    background: var(--admin-surface);
+    border: 1px solid rgba(32, 23, 15, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    padding: 18px;
+}
+
+.admin-app .tab-pane > .d-flex > h4 {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+.admin-app .btn {
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    text-transform: none;
+}
+
+.admin-app .btn-outline-dark {
+    border-color: rgba(32, 23, 15, 0.28);
+    color: rgba(32, 23, 15, 0.9);
+}
+
+.admin-app .btn-outline-secondary {
+    border-color: rgba(32, 23, 15, 0.22);
+    color: rgba(32, 23, 15, 0.9);
+}
+
+.admin-app .btn-outline-secondary:hover,
+.admin-app .btn-outline-dark:hover {
+    background: var(--admin-surface-2);
+}
+
+.admin-app .btn-success,
+.admin-app .btn-primary {
+    border: 0;
+    background: var(--admin-red);
+}
+
+.admin-app .btn-success:hover,
+.admin-app .btn-primary:hover {
+    background: var(--admin-red-2);
+}
+
+.admin-app .category-block.card {
+    border: 1px solid rgba(32, 23, 15, 0.14);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.admin-app .category-block .card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Force category headers into the beige/red admin theme (keeps markup unchanged) */
+.admin-app .category-block .card-header.bg-secondary,
+.admin-app .category-block .card-header.bg-primary,
+.admin-app .category-block .card-header.bg-light {
+    background: var(--admin-red) !important;
+    color: #fff !important;
+}
+
+.admin-app .category-block .card-header .btn-light {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+.admin-app .category-block .card-header .btn-light:hover {
+    background: #fff;
+}
+
+.admin-app .category-block .card-body {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.menu-item-card {
+    cursor: pointer;
+    border-radius: 16px;
+    border: 1px solid rgba(32, 23, 15, 0.12);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14) !important;
+    border-color: rgba(32, 23, 15, 0.2);
+}
+
+.menu-item-card .card-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: 0.88rem;
+}
+
+.menu-item-card .card-text {
+    line-height: 1.25;
+    font-size: 0.8rem;
+    color: var(--admin-muted) !important;
+}
+
+/* Reduce overall visual noise in the item grid */
+.admin-app .menu-item-card .text-primary {
+    font-size: 0.86rem;
+}
+
+.admin-app .menu-item-card .badge {
+    font-size: 0.72rem;
+}
+
+.admin-app .table-card.card {
+    border-radius: 16px;
+    border: 1px solid rgba(32, 23, 15, 0.14);
+    overflow: hidden;
+}
+
+.admin-app .table-card .card-header {
+    background: var(--admin-surface-2) !important;
+}
+
+.admin-app .form-control,
+.admin-app .form-select {
+    border-radius: 12px;
+    border-color: rgba(32, 23, 15, 0.18);
+    font-size: 0.9rem;
+}
+
+.admin-app .modal-content {
+    border-radius: 16px;
+    border: 1px solid rgba(32, 23, 15, 0.18);
+}
+
+.admin-app .modal-header {
+    background: var(--admin-surface-2);
+    border-bottom: 1px solid rgba(32, 23, 15, 0.14);
+}
+
+.admin-app .modal-title {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.admin-app .modal-body {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.admin-app .admin-modal .modal-dialog {
+    max-width: 640px;
+}
+
+.admin-app .admin-modal .modal-header {
+    background: var(--admin-red);
+    color: #fff;
+}
+
+.admin-app .admin-modal .btn-close {
+    filter: invert(1) grayscale(100%);
+    opacity: 0.9;
+}
+
+.admin-app .modal-footer {
+    background: rgba(255, 255, 255, 0.35);
+    border-top: 1px solid rgba(32, 23, 15, 0.12);
+}
+
+.admin-app .modal .form-check-input:checked {
+    background-color: var(--admin-red);
+    border-color: var(--admin-red);
+}
+
+.admin-app .btn-check:checked + .btn,
+.admin-app .btn-check:active + .btn {
+    background: var(--admin-red);
+    border-color: var(--admin-red);
+    color: #fff;
+}
+
+.admin-auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    color: rgba(243, 234, 219, 0.92);
+}
+
+.admin-auth-page .container {
+    color: inherit;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.admin-auth-card {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(243, 234, 219, 0.08);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+}
+
+.admin-auth-card .card-body {
+    background: var(--admin-surface);
+    color: var(--admin-text);
+}
+
+.admin-auth-brand {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    font-size: 1.15rem;
+}
+
+.admin-auth-subtitle {
+    color: rgba(32, 23, 15, 0.65);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.admin-auth-form .form-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.admin-app .toast-container {
+    z-index: 1095;
+}
+
+.admin-app .toast {
+    border-radius: 14px;
+    border: 1px solid rgba(32, 23, 15, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.admin-app .toast-header {
+    background: var(--admin-surface-2);
+    color: var(--admin-text);
+    border-bottom: 1px solid rgba(32, 23, 15, 0.12);
+}
+
+.admin-app .toast-header.toast-success {
+    background: var(--admin-red);
+    color: #fff;
+}
+
+.admin-app .toast-header.toast-danger {
+    background: var(--admin-red-2);
+    color: #fff;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

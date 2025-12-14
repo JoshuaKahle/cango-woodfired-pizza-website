@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #A93226; /* Rust Red */
+    --accent-color: #D4AC0D; /* Golden Dough */
+    --dark-bg: #2E1810; /* Dark Wood */
+    --light-bg: #FEF9E7; /* Warm Beige */
+    --text-color: #3E2723; /* Coffee Brown */
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .brand-logo, .btn {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logo-wrapper {
+    display: block;
+    width: 140px; /* Specific width to hold space in flex header */
+    height: 50px; /* Approximate height of text/other elements to keep alignment */
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: -10px; /* Slight adjust upwards or 0 */
+    left: 0;
+    height: 95px; /* Reduced size for less overlap */
+    width: auto;
+    z-index: 1030; /* Above sticky header content if it overlaps */
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+}
+
+.main-header {
+    background-color: var(--dark-bg);
+    border-bottom: 4px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/woodfired_pizza_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.info-bar {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    border-color: #B7950B;
+    color: #2E1810;
+}
+
+.btn-warning:hover {
+    background-color: #F1C40F;
+    border-color: #D4AC0D;
+    color: #2E1810;
+}
+
+.card {
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(62, 39, 35, 0.1);
+    border-radius: 2px;
+}
+
+.menu-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.price-tag {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.special-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.category-card {
+    height: 350px; /* Increased height for better aspect ratio in 2x2 */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.category-card:hover {
+    transform: scale(1.02);
+}
+
+.category-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.1));
+    transition: background 0.3s ease;
+}
+
+.category-card:hover .overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2));
+}
+
+.category-card h3 {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    font-weight: 700;
+}
+
+.category-card .card-desc {
+    font-size: 1rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    font-family: 'Merriweather', serif; /* Ensure it matches body font explicitly if needed */
+}
+
+/* New Menu Table Styles */
+.menu-table thead th {
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.menu-table td {
+    vertical-align: middle;
+    border-bottom: 1px dotted rgba(0,0,0,0.1);
+}
+
+.menu-table tr:hover td {
+    background-color: rgba(212, 172, 13, 0.05); /* Very light accent color */
+}
+
+.menu-table .fw-bold {
+    color: var(--primary-color);
+}
+
+/* Specials Page Styling */
+.specials-table thead th {
+    border-bottom: 2px solid var(--accent-color) !important;
+    color: var(--text-color);
+}
+
+.text-special {
+    color: #B7950B; /* Darker Gold for readability */
+}
+
+.specials-table .fw-bold {
+    color: #B7950B;
+}
+
+.specials-table tr:hover td {
+    background-color: rgba(169, 50, 38, 0.05); /* Very light primary color (Red) tint for contrast */
+}
+
